@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(42, 92, 255);
+}
+.container{
+    position: absolute;
+    transform: translateY(20px);
+    height: 850px;
+    width: 850px;
+    border: 3px dashed red;
+    background: radial-gradient(blue,rgb(42, 92, 255));
+}
+.vs{
+    position: absolute;
+    width: 850px;
+    height: 250px;
+    border: 3px dotted yellow;
+    display: flex;
+}
+.player{
+    position: absolute;
+    border-radius: 50%;
+    top: 85px;
+    height: 150px;
+    width: 220px;
+    border: 2px black solid;
+    background-color: rgb(226, 229, 231);
+    left: 40px;
+}
+.computer{
+    position: absolute;
+    border-radius: 50%;
+    right: 40px;
+    top: 85px;
+    height: 150px;
+    width: 220px;
+    border: 2px black solid;
+    background-color: rgb(226, 229, 231);
+}
+.vs_text{
+    border: 1px solid black;
+    font-size: 50px;
+}
