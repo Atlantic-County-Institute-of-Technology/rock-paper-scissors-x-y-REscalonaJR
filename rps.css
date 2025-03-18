@@ -43,3 +43,13 @@ body{
     border: 1px solid black;
     font-size: 50px;
 }
+.button{
+    height: 100px;
+     width: 100px;
+     border-radius:50% ;
+     background-color: red;
+     box-shadow: 0px 5px 1px 1px;
+}
+.button:hover {
+    background-color: rgb(230, 70, 70);
+}
