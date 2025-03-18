@@ -1,16 +1,19 @@
 body{
     display: flex;
-    flex-direction: column;
+    flex-direction: column ;
     align-items: center;
     background-color: rgb(42, 92, 255);
 }
 .container{
     position: absolute;
     transform: translateY(20px);
-    height: 850px;
+    height: 700px;
     width: 850px;
     border: 3px dashed red;
     background: radial-gradient(blue,rgb(42, 92, 255));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .vs{
     position: absolute;
@@ -18,6 +21,13 @@ body{
     height: 250px;
     border: 3px dotted yellow;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.result{
+    position: absolute;
+    font-size: 28px;
+    top: 35px;
 }
 .player{
     position: absolute;
@@ -40,6 +50,60 @@ body{
     background-color: rgb(226, 229, 231);
 }
 .vs_text{
-    border: 1px solid black;
-    font-size: 50px;
+    position: absolute;
+    /*border: 1px solid black;*/
+    font-size: 55px;
+    bottom: 10px;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    
+    height: 120px;
+     width: 120px;
+     border-radius:50% ;
+     background-color: red;
+     box-shadow: 0px 5px 1px 1px;
+     margin:25px ;/*how the buttons look*/
+}
+.button:hover {
+    background-color: rgb(230, 70, 70);/*the effect they have when you hover over them*/
+}
+.buttons{
+    position: absolute;
+    border: 3px dotted brown;
+    width: 850px;
+    height: 250px;
+    top: 250px;
+    display: flex;
+    align-items: center;
+}
+.reset{
+    position: absolute;
+    font-size: 30px;
+    width: 225px;
+    height: 80px;
+    bottom: 100px;
+    background: radial-gradient(white, rgb(187, 182, 182));
+}
+.player_score{
+    position: absolute;
+    left: 30px;
+    font-size: 25px;
+    /*player score*/
+}
+.computer_score{
+    position: absolute;
+    right: 30px;
+    font-size: 25px;
+    /*computer score*/
+}
+.microwave_img{
+    position: absolute;
+    bottom: 89px;
+    height: 75px;
+    
+}
+.tinfoil_img{
+    height: 900px;
 }
