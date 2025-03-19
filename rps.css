@@ -67,14 +67,14 @@ body{
      margin:25px ;/*how the buttons look*/
 }
 .button:hover {
-    background-color: rgb(230, 70, 70);
+    background-color: rgb(230, 70, 70);/*the effect they have when you hover over them*/
 }
 .buttons{
     position: absolute;
     border: 3px dotted brown;
     width: 850px;
     height: 250px;
-    top: 251px;
+    top: 250px;
     display: flex;
     align-items: center;
 }
