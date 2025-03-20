@@ -114,7 +114,11 @@ body{
 .tinfoil_img{
     height: 900px;
 }
-.display_paper{
-    background-image: url(assets/paper.png) ;
+.display{
     height: 150px;
+}
+.display_micro{
+    position: absolute;
+    height:120px ;
+    top: 10px;
 }
