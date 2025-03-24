@@ -59,7 +59,7 @@ function pickpaper() {
         result.innerHTML = "Microwave Burns Paper, You Lose!"
         cpuwins++
         cpu_score.innerHTML = "Computer score: " + cpuwins
-     } else {
+     } else if (cpuchoice == 5) {
         computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="cpu_display">'
         result.innerHTML = "Paper Is more Durable than tin foil, You Win!"
         playerwins++;
@@ -91,7 +91,7 @@ function pickrock() {
         result.innerHTML = "Rock Crushes Microwave, You win!"
         playerwins++;
         player_score.innerHTML = "Player score: " + playerwins
-     } else {
+     } else if (cpuchoice == 5) {
         computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="cpu_display">'
         result.innerHTML = "Tin Foil covers Rock, You Lose!"
         cpuwins++
@@ -122,7 +122,7 @@ function pickscissors() {
        result.innerHTML = "Microwave melts scissors, You Lose!"
        cpuwins++
        cpu_score.innerHTML = "Computer score: " + cpuwins
-    } else {
+    } else if (cpuchoice == 5) {
        computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="cpu_display">'
        result.innerHTML = "Scissors cuts Tin Foil, You win!"
        playerwins++;
@@ -153,7 +153,7 @@ function pickmicrowave() {
        computer.innerHTML = '<img src="assets/microwave.png" alt="" class="cpu_display_micro">'
        result.innerHTML = "It's a draw!"
        
-    } else {
+    } else if (cpuchoice == 5) {
        computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="cpu_display">'
        result.innerHTML = "Tin Foil explodes Microwave, You Lose!"
        cpuwins++
@@ -183,7 +183,7 @@ function picktinfoil() {
         result.innerHTML = "Tin Foil explodes Microwave, You Win!"
         playerwins++;
         player_score.innerHTML = "Player score: " + playerwins
-     } else {
+     } else if (cpuchoice == 5) {
         computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="cpu_display">'
         result.innerHTML = "It's a draw!"
         
