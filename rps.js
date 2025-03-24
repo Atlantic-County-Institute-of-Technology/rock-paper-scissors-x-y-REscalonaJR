@@ -16,7 +16,7 @@ for (let index = 0; index < buttons.length; index++) {
     buttons[index].addEventListener("click", () => {
         buttons.forEach(Element => {
             Element.style.display = "none"
-            setTimeout(displayagain, 4000)
+            setTimeout(displayagain, 1000)
             
         })
     })
