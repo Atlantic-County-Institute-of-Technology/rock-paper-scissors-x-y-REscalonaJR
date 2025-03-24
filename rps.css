@@ -112,9 +112,18 @@ body{
     
 }
 .tinfoil_img{
-    height: 900px;
+    height: 150px;
+}
+.rock_img{
+    height: 150px;
 }
 .display{
+    height: 150px;
+}
+.scissors_img{
+    height: 140px;
+}
+.paper_img{
     height: 150px;
 }
 .display_micro{
