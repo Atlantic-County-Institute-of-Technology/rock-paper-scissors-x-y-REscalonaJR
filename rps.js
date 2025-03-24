@@ -28,7 +28,7 @@ function displayagain(){
 }
 
 function computerchoice() {
-    return Math.floor(Math.random() * (4.25)) + 1
+    return Math.floor(Math.random() * (4.99)) + 1
       
 }
 
