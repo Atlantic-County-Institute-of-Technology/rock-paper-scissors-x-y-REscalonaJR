@@ -162,6 +162,7 @@ function pickmicrowave() {
 }
 function picktinfoil() {
     player.innerHTML = '<img src="assets/tin_foil.png" alt="" class="display">'
+    cpuchoice = computerchoice()
     if (cpuchoice == 1 ) {
         computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
         result.innerHTML = "Paper Is more Durable than tin foil, You Lose!";
