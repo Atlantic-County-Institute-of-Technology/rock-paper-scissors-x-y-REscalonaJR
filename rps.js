@@ -68,10 +68,39 @@ function pickpaper() {
 }
 function pickrock() {
     player.innerHTML = '<img src="assets/rock.png" alt="" class="display">'
+    cpuchoice = computerchoice()
+     /*roberto is roberto*/
     
+     if (cpuchoice == 1 ) {
+        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
+        result.innerHTML = "Paper Covers Rock, You Lose!";
+        cpuwins++
+        cpu_score.innerHTML = "Computer score: " + cpuwins
+     } else if(cpuchoice == 2) {
+        computer.innerHTML = '<img src="assets/rock.png" alt="" class="cpu_display">'
+        result.innerHTML = "It's a draw!"
+        
+     } else if(cpuchoice == 3) {
+        computer.innerHTML = '<img src="assets/scissors.png" alt="" class="cpu_display">'
+        result.innerHTML = "Rock Crushes Scissors, You win!"
+        playerwins++;
+        player_score.innerHTML = "Player score: " + playerwins
+
+     } else if(cpuchoice == 4) {
+        computer.innerHTML = '<img src="assets/microwave.png" alt="" class="cpu_display_micro">'
+        result.innerHTML = "Rock Crushes Microwave, You win!"
+        playerwins++;
+        player_score.innerHTML = "Player score: " + playerwins
+     } else {
+        computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="cpu_display">'
+        result.innerHTML = "Tin Foil covers Rock, You Lose!"
+        cpuwins++
+        cpu_score.innerHTML = "Computer score: " + cpuwins
+     }
 }
 function pickscissors() {
     player.innerHTML = '<img src="assets/scissors.png" alt="" class="display">'
+    
 }
 function pickmicrowave() {
     player.innerHTML = '<img src="assets/microwave.png" alt="" class="display_micro">'
