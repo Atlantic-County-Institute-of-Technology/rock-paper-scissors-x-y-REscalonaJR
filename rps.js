@@ -100,13 +100,93 @@ function pickrock() {
 }
 function pickscissors() {
     player.innerHTML = '<img src="assets/scissors.png" alt="" class="display">'
-    
+    cpuchoice = computerchoice()
+    /*roberto is roberto*/
+   
+    if (cpuchoice == 1 ) {
+       computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
+       result.innerHTML = "scissors cuts paper, You Win!";
+       playerwins++;
+       player_score.innerHTML = "Player score: " + playerwins
+    } else if(cpuchoice == 2) {
+       computer.innerHTML = '<img src="assets/rock.png" alt="" class="cpu_display">'
+       result.innerHTML = "Rock Crushes Scissors, You Lose!"
+       cpuwins++
+       cpu_score.innerHTML = "Computer score: " + cpuwins
+    } else if(cpuchoice == 3) {
+       computer.innerHTML = '<img src="assets/scissors.png" alt="" class="cpu_display">'
+       result.innerHTML = "It's a draw!"
+       
+    } else if(cpuchoice == 4) {
+       computer.innerHTML = '<img src="assets/microwave.png" alt="" class="cpu_display_micro">'
+       result.innerHTML = "Microwave melts scissors, You Lose!"
+       cpuwins++
+       cpu_score.innerHTML = "Computer score: " + cpuwins
+    } else {
+       computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="cpu_display">'
+       result.innerHTML = "Scissors cuts Tin Foil, You win!"
+       playerwins++;
+       player_score.innerHTML = "Player score: " + playerwins
+    }
 }
 function pickmicrowave() {
     player.innerHTML = '<img src="assets/microwave.png" alt="" class="display_micro">'
+    cpuchoice = computerchoice()
+    /*roberto is roberto*/
+   
+    if (cpuchoice == 1 ) {
+       computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
+       result.innerHTML = "Microwave Burns Paper, You win!";
+       playerwins++;
+       player_score.innerHTML = "Player score: " + playerwins
+    } else if(cpuchoice == 2) {
+       computer.innerHTML = '<img src="assets/rock.png" alt="" class="cpu_display">'
+       result.innerHTML = "Rock Crushes Microwave, You lose!"
+       cpuwins++
+       cpu_score.innerHTML = "Computer score: " + cpuwins
+    } else if(cpuchoice == 3) {
+       computer.innerHTML = '<img src="assets/scissors.png" alt="" class="cpu_display">'
+       result.innerHTML = "Microwave melts scissors, You Win!"
+       playerwins++;
+       player_score.innerHTML = "Player score: " + playerwins
+    } else if(cpuchoice == 4) {
+       computer.innerHTML = '<img src="assets/microwave.png" alt="" class="cpu_display_micro">'
+       result.innerHTML = "It's a draw!"
+       
+    } else {
+       computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="cpu_display">'
+       result.innerHTML = "Tin Foil explodes Microwave, You Lose!"
+       cpuwins++
+       cpu_score.innerHTML = "Computer score: " + cpuwins
+    }
 }
 function picktinfoil() {
     player.innerHTML = '<img src="assets/tin_foil.png" alt="" class="display">'
+    if (cpuchoice == 1 ) {
+        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
+        result.innerHTML = "Paper Is more Durable than tin foil, You Lose!";
+        cpuwins++
+        cpu_score.innerHTML = "Computer score: " + cpuwins
+     } else if(cpuchoice == 2) {
+        computer.innerHTML = '<img src="assets/rock.png" alt="" class="cpu_display">'
+        result.innerHTML = "Tin Foil covers Rock, You Win!"
+        playerwins++;
+        player_score.innerHTML = "Player score: " + playerwins
+     } else if(cpuchoice == 3) {
+        computer.innerHTML = '<img src="assets/scissors.png" alt="" class="cpu_display">'
+        result.innerHTML = "Scissors cuts Tin Foil, You Lose!"
+        cpuwins++
+        cpu_score.innerHTML = "Computer score: " + cpuwins
+     } else if(cpuchoice == 4) {
+        computer.innerHTML = '<img src="assets/microwave.png" alt="" class="cpu_display_micro">'
+        result.innerHTML = "Tin Foil explodes Microwave, You Win!"
+        playerwins++;
+        player_score.innerHTML = "Player score: " + playerwins
+     } else {
+        computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="cpu_display">'
+        result.innerHTML = "It's a draw!"
+        
+     }
 }
 
 paper.addEventListener("click",pickpaper)
