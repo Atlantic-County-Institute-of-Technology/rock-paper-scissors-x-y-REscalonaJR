@@ -122,7 +122,7 @@ body{
 }
 .display{
     height: 100px;
-    animation: bounce 3s 1.5s linear  1;
+    animation: bounce 2s 1.5s linear  1;
     height: 140px;
 }
 @keyframes bounce {
@@ -153,24 +153,24 @@ body{
     position: absolute;
     height:120px ;
     top: 10px;
-    animation: bounce 3s 1.5s linear  1;
+    animation: bounce 2s 1.5s linear  1;
 }
 .cpu_display{
     position: absolute;
     height: 150px;
     left: 30px;
-    animation: bounce 3s  linear  1;
+    animation: bounce 2s  linear  1;
 }
 .cpu_display_micro{
     position: absolute;
     height:120px ;
     top: 10px;
     left: 30px;
-    animation: bounce 3s linear  1;
+    animation: bounce 2s linear  1;
 }
 .tin_display{
     position: absolute;
     height: 150px;
-    animation: bounce 3s  linear  1;
+    animation: bounce 2s  linear  1;
     left: 0px;
 }

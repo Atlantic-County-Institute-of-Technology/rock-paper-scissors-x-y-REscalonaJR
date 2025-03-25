@@ -39,7 +39,7 @@ function pickpaper() {
     setTimeout(papercheck1, 1500)
 }
 function papercheck1(){
-   setTimeout(papercheck2, 3000)
+   setTimeout(papercheck2, 2000)
     if (cpuchoice == 1 ) {
         computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
      } else if(cpuchoice == 2) {
@@ -83,7 +83,7 @@ function pickrock() {
     setTimeout(rockcheck1, 1500)
 }
 function rockcheck1(){
-   setTimeout(rockcheck2, 3000)
+   setTimeout(rockcheck2, 2000)
     if (cpuchoice == 1 ) {
         computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
      } else if(cpuchoice == 2) {
@@ -127,7 +127,7 @@ function pickscissors() {
    setTimeout(scissorscheck1, 1500)
 }
 function scissorscheck1(){
-    setTimeout(scissorscheck2, 3000)
+    setTimeout(scissorscheck2, 2000)
      if (cpuchoice == 1 ) {
        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
     } else if(cpuchoice == 2) {
@@ -173,7 +173,7 @@ function pickmicrowave() {
     }
 
 function microwavecheck1(){
-   setTimeout(microwavecheck2, 3000)
+   setTimeout(microwavecheck2, 2000)
      if (cpuchoice == 1 ) {
        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
     } else if(cpuchoice == 2) {
@@ -217,7 +217,7 @@ function picktinfoil() {
     
 }
 function tinfoilcheck1(){
-   setTimeout(tinfoilcheck2, 3000)
+   setTimeout(tinfoilcheck2, 2000)
     if (cpuchoice == 1 ) {
         computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
      } else if(cpuchoice == 2) {
