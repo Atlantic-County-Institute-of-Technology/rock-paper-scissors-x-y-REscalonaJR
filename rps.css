@@ -115,6 +115,7 @@ body{
     
 }
 .tinfoil_img{
+    position: absolute;
     height: 100px;
     right: 20px;
 }
