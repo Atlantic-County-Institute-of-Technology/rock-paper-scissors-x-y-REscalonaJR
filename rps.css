@@ -119,9 +119,31 @@ body{
 }
 .display{
     height: 150px;
-}
-.scissors_img{
+    animation: bounce 3s 1.5s linear  1;
+
+
     height: 140px;
+}
+@keyframes bounce {
+    
+        16.66%{transform: translateY(-100px);
+        }
+        33.33%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(-100px);
+        }
+        66.66%{
+            transform: translateY(0px);
+        }
+        83.33%{
+            transform: translateY(-100px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    
 }
 .paper_img{
     height: 150px;
@@ -130,15 +152,24 @@ body{
     position: absolute;
     height:120px ;
     top: 10px;
+    animation: bounce 3s 1.5s linear  1;
 }
 .cpu_display{
     position: absolute;
     height: 150px;
     left: 30px;
+    animation: bounce 3s  linear  1;
 }
 .cpu_display_micro{
     position: absolute;
     height:120px ;
     top: 10px;
     left: 30px;
+    animation: bounce 3s linear  1;
+}
+.tin_display{
+    position: absolute;
+    height: 150px;
+    animation: bounce 3s  linear  1;
+    left: 0px;
 }
