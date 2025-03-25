@@ -105,6 +105,9 @@ body{
     font-size: 25px;
     /*computer score*/
 }
+.scissors_img{
+    height: 100px;
+}
 .microwave_img{
     position: absolute;
     bottom: 89px;
@@ -112,16 +115,14 @@ body{
     
 }
 .tinfoil_img{
-    height: 150px;
+    height: 100px;
 }
 .rock_img{
-    height: 150px;
+    height: 100px;
 }
 .display{
-    height: 150px;
+    height: 100px;
     animation: bounce 3s 1.5s linear  1;
-
-
     height: 140px;
 }
 @keyframes bounce {
@@ -146,7 +147,7 @@ body{
     
 }
 .paper_img{
-    height: 150px;
+    height: 100px;
 }
 .display_micro{
     position: absolute;
