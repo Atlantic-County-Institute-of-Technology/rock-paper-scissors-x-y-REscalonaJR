@@ -42,7 +42,6 @@ function papercheck1(){
    setTimeout(papercheck2, 3000)
     if (cpuchoice == 1 ) {
         computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
-        result.innerHTML = "It's A Draw!";
      } else if(cpuchoice == 2) {
         computer.innerHTML = '<img src="assets/rock.png" alt="" class="cpu_display">'
      } else if(cpuchoice == 3) {
