@@ -29,8 +29,8 @@ body{
 }
 .result{
     position: absolute;
-    font-size: 19px;
-    top: 31px;
+    font-size: 25px;
+    top: 30px;
 }
 .player{
     position: absolute;
