@@ -138,63 +138,104 @@ function scissorscheck2(){
      }
 }
 function pickmicrowave() {
-    player.innerHTML = '<img src="assets/microwave.png" alt="" class="display_micro">'
-    cpuchoice = computerchoice()
-    /*roberto is roberto*/
-    result.innerHTML = "Computer's thinking...";
-    /*roberto is roberto*/
-    computer.innerHTML = ""
-   setTimeout(microwavecheck1, 1500)
-   
-    }
+   player.innerHTML = '<img src="assets/microwave.png" alt="" class="display_micro">'
+   cpuchoice = computerchoice()
+   /*roberto is roberto*/
+   result.innerHTML = "Computer's thinking...";
+   /*roberto is roberto*/
+   computer.innerHTML = ""
+  setTimeout(microwavecheck1, 1500)
+  
+   }
 
 function microwavecheck1(){
-     if (cpuchoice == 1 ) {
-       computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
+  setTimeout(microwavecheck2, 2000)
+    if (cpuchoice == 1 ) {
+      computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
        result.innerHTML = "Rock, Paper, Scissors, Shoot!"
-    } else if(cpuchoice == 2) {
-       computer.innerHTML = '<img src="assets/rock.png" alt="" class="cpu_display">'
+   } else if(cpuchoice == 2) {
+      computer.innerHTML = '<img src="assets/rock.png" alt="" class="cpu_display">'
        result.innerHTML = "Rock, Paper, Scissors, Shoot!"
-    } else if(cpuchoice == 3) {
-       computer.innerHTML = '<img src="assets/scissors.png" alt="" class="cpu_display">'
+   } else if(cpuchoice == 3) {
+      computer.innerHTML = '<img src="assets/scissors.png" alt="" class="cpu_display">'
        result.innerHTML = "Rock, Paper, Scissors, Shoot!"
-    } else if(cpuchoice == 4) {
-       computer.innerHTML = '<img src="assets/microwave.png" alt="" class="cpu_display_micro">'
+   } else if(cpuchoice == 4) {
+      computer.innerHTML = '<img src="assets/microwave.png" alt="" class="cpu_display_micro">'
        result.innerHTML = "Rock, Paper, Scissors, Shoot!"
-    } else if (cpuchoice == 5) {
-       computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="tin_display">'
-       result.innerHTML = "Tin Foil explodes Microwave, You Lose!"
-       cpuwins++
-       cpu_score.innerHTML = "Computer score: " + cpuwins
-    }
+   } else if (cpuchoice == 5) {
+      computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="tin_display">'
+       result.innerHTML = "Rock, Paper, Scissors, Shoot!"
+   }
+}
+function microwavecheck2(){
+  if (cpuchoice == 1 ) {
+     result.innerHTML = "Microwave Burns Paper, You win!";
+     playerwins++;
+     player_score.innerHTML = "Player score: " + playerwins
+  } else if(cpuchoice == 2) {
+     result.innerHTML = "Rock Crushes Microwave, You lose!"
+     cpuwins++
+     cpu_score.innerHTML = "Computer score: " + cpuwins
+  } else if(cpuchoice == 3) {
+     result.innerHTML = "Microwave melts scissors, You Win!"
+     playerwins++;
+     player_score.innerHTML = "Player score: " + playerwins
+  } else if(cpuchoice == 4) {
+     result.innerHTML = "It's a draw!"
+  } else if (cpuchoice == 5) {
+     result.innerHTML = "Tin Foil explodes Microwave, You Lose!"
+     cpuwins++
+     cpu_score.innerHTML = "Computer score: " + cpuwins
+  }
 }
 function picktinfoil() {
-    player.innerHTML = '<img src="assets/tin_foil.png" alt="" class="display">'
-    cpuchoice = computerchoice()
-    result.innerHTML = "Computer's thinking...";
-     /*roberto is roberto*/
-     computer.innerHTML = ""
-    setTimeout(tinfoilcheck1, 1500)
-    
+   player.innerHTML = '<img src="assets/tin_foil.png" alt="" class="display">'
+   cpuchoice = computerchoice()
+   result.innerHTML = "Computer's thinking...";
+    /*roberto is roberto*/
+    computer.innerHTML = ""
+   setTimeout(tinfoilcheck1, 1500)
+   
 }
 function tinfoilcheck1(){
-    if (cpuchoice == 1 ) {
-        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
+  setTimeout(tinfoilcheck2, 2000)
+   if (cpuchoice == 1 ) {
+       computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
         result.innerHTML = "Rock, Paper, Scissors, Shoot!"
-     } else if(cpuchoice == 2) {
-        computer.innerHTML = '<img src="assets/rock.png" alt="" class="cpu_display">'
+    } else if(cpuchoice == 2) {
+       computer.innerHTML = '<img src="assets/rock.png" alt="" class="cpu_display">'
         result.innerHTML = "Rock, Paper, Scissors, Shoot!"
-     } else if(cpuchoice == 3) {
-        computer.innerHTML = '<img src="assets/scissors.png" alt="" class="cpu_display">'
+    } else if(cpuchoice == 3) {
+       computer.innerHTML = '<img src="assets/scissors.png" alt="" class="cpu_display">'
         result.innerHTML = "Rock, Paper, Scissors, Shoot!"
-     } else if(cpuchoice == 4) {
-        computer.innerHTML = '<img src="assets/microwave.png" alt="" class="cpu_display_micro">'
+    } else if(cpuchoice == 4) {
+       computer.innerHTML = '<img src="assets/microwave.png" alt="" class="cpu_display_micro">'
         result.innerHTML = "Rock, Paper, Scissors, Shoot!"
-     } else if (cpuchoice == 5) {
-        computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="tin_display">'
-        result.innerHTML = "It's a draw!"
-        
-     }
+    } else if (cpuchoice == 5) {
+       computer.innerHTML = '<img src="assets/tin_foil.png" alt="" class="tin_display">'
+        result.innerHTML = "Rock, Paper, Scissors, Shoot!"
+    }
+}
+function tinfoilcheck2(){
+  if (cpuchoice == 1 ) {
+     result.innerHTML = "Paper Is more Durable than tin foil, You Lose!";
+     cpuwins++
+     cpu_score.innerHTML = "Computer score: " + cpuwins
+  } else if(cpuchoice == 2) {    
+     result.innerHTML = "Tin Foil covers Rock, You Win!"
+     playerwins++;
+     player_score.innerHTML = "Player score: " + playerwins
+  } else if(cpuchoice == 3) {
+     result.innerHTML = "Scissors cuts Tin Foil, You Lose!"
+     cpuwins++
+     cpu_score.innerHTML = "Computer score: " + cpuwins
+  } else if(cpuchoice == 4) {
+     result.innerHTML = "Tin Foil explodes Microwave, You Win!"
+     playerwins++;
+     player_score.innerHTML = "Player score: " + playerwins
+  } else if (cpuchoice == 5) {
+     result.innerHTML = "It's a draw!"
+  }
 }
 function Clear() {
     computer.innerHTML = ""
