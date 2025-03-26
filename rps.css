@@ -99,7 +99,6 @@ body{
 .player_score{
     position: absolute;
     left: 30px;
-    transform: translateY(-2px);
     font-size: 25px;
     /*player score*/
 }
@@ -107,7 +106,6 @@ body{
     position: absolute;
     right: 30px;
     font-size: 25px;
-    transform: translateY(-2px);
     /*computer score*/
 }
 .scissors_img{
