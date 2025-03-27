@@ -1,15 +1,13 @@
-.invis{
-    display: none;
-}
+
 body{
     display: flex;
     flex-direction: column ;
     align-items: center;
-    background-color: rgb(42, 92, 255);
+    background-color: rgb(42, 92, 255);/*sets the bakground color, display, and alignment*/
 }
 .container{
     position: absolute;
-    transform: translateY(20px);
+    transform: translateY(20px);/*sets the bakground color, display, and alignment*/
     height: 700px;
     width: 850px;
     border: 3px solid rgb(0, 0, 0);
@@ -22,14 +20,14 @@ body{
     position: absolute;
     width: 850px;
     height: 250px;
-    border: 3px solid rgb(0, 0, 0);
+    border: 3px solid rgb(0, 0, 0);/*sets the bakground color, display, and alignment*/
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .result{
     position: absolute;
-    font-size: 28px;
+    font-size: 28px;/*sets the position and text size of the text*/
     top: 35px;
 }
 .player{
@@ -42,7 +40,7 @@ body{
     flex-direction: column;
     align-items: center;
     border: 2px black solid;
-    background-color: rgb(226, 229, 231);
+    background-color: rgb(226, 229, 231);/*sets the bakground color, display, and alignment of the player display*/
     left: 40px;
     
 }
@@ -52,15 +50,14 @@ body{
     right: 40px;
     top: 85px;
     height: 150px;
-    width: 220px;
+    width: 220px;/*sets the bakground color, display, and alignment of the computer display*/
     border: 2px black solid;
     background-color: rgb(226, 229, 231);
 }
 .vs_text{
     position: absolute;
-    /*border: 1px solid black;*/
     font-size: 55px;
-    bottom: 10px;
+    bottom: 10px;/*sets the position and text size of the text*/
 }
 .button{
     display: flex;
@@ -78,7 +75,7 @@ body{
 }
 .buttons{
     position: absolute;
-    border: 3px solid rgb(0, 0, 0);
+    border: 3px solid rgb(0, 0, 0);/*the container for the buttons*/
     width: 850px;
     height: 250px;
     top: 250px;
@@ -88,7 +85,7 @@ body{
 .reset{
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;/*the look for the reset button*/
     position: absolute;
     font-size: 30px;
     width: 225px;
@@ -110,22 +107,22 @@ body{
 }
 .scissors_img{
     height: 100px;
-}
+}/*sets the height of the image*/
 .microwave_img{
-    position: absolute;
+    position: absolute;/*sets the height of the image*/
     bottom: 89px;
     height: 75px;
     
 }
 .tinfoil_img{
-    height: 100px;
+    height: 100px;/*sets the height of the image*/
 }
 .rock_img{
-    height: 100px;
+    height: 100px;/*sets the height of the image*/
 }
 .display{
     height: 100px;
-    animation: bounce 2s 1.5s linear  1;
+    animation: bounce 2s 1.5s linear  1;/*sets the height and  of the image*/
     height: 140px;
 }
 @keyframes bounce {
@@ -147,10 +144,10 @@ body{
         100%{
             transform: translateY(0px);
         }
-    
+    /*the rock paper scissors animation making them go up and down*/
 }
 .paper_img{
-    height: 100px;
+    height: 100px;/*sets the height of the image*/
 }
 .display_micro{
     position: absolute;
@@ -175,5 +172,5 @@ body{
     position: absolute;
     height: 150px;
     animation: bounce 2s  linear  1;
-    left: 0px;
+    left: 30px;
 }

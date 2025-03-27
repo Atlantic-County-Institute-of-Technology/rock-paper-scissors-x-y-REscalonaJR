@@ -28,19 +28,19 @@ function displayagain(){
 }
 function computerchoice() {
     return Math.floor(Math.random() * (4.99)) + 1     /*makes it pick a number 1-5.99 because if it 
-    was 1-5 tin foil would almost never appear since you would need to get exactly 5.00*/
+    was 1-5 tin foil but would almost never appear since you would need to get exactly 5.00*/
 }
-function pickpaper() {
-   player.innerHTML = '<img src="assets/paper.png" alt="" class="display">';
+function pickpaper() {// thins is the function for when the player selects paper
+   player.innerHTML = '<img src="assets/paper.png" alt="" class="display">';// changes the image on the player display
     playerpick = 1
    cpuchoice = computerchoice()
    result.innerHTML = "Computer's thinking...";
     /*roberto is roberto*/
-    computer.innerHTML = ""
-   setTimeout(papercheck1, 1500)
+    computer.innerHTML = ""//resets the computer's display
+   setTimeout(papercheck1, 1500)// makes papercheck1 function run after 1.5sec
 }
 function papercheck1(){
-  setTimeout(papercheck2, 2000)
+  setTimeout(papercheck2, 2000)// makes papercheck2 function run after 2sec
    if (cpuchoice == 1 ) {
        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
         result.innerHTML = "Rock, Paper, Scissors, Shoot!"
@@ -48,8 +48,8 @@ function papercheck1(){
        computer.innerHTML = '<img src="assets/rock.png" alt="" class="cpu_display">'
         result.innerHTML = "Rock, Paper, Scissors, Shoot!"
     } else if(cpuchoice == 3) {
-       computer.innerHTML = '<img src="assets/scissors.png" alt="" class="cpu_display">'
-        result.innerHTML = "Rock, Paper, Scissors, Shoot!"
+       computer.innerHTML = '<img src="assets/scissors.png" alt="" class="cpu_display">'// makes the computer display the item based on the number
+        result.innerHTML = "Rock, Paper, Scissors, Shoot!"// displays rock paper scissors shoot message
     } else if(cpuchoice == 4) {
        computer.innerHTML = '<img src="assets/microwave.png" alt="" class="cpu_display_micro">'
         result.innerHTML = "Rock, Paper, Scissors, Shoot!"
@@ -66,7 +66,7 @@ function papercheck2(){
      playerwins++;
      player_score.innerHTML = "Player score: " + playerwins
   } else if(cpuchoice == 3) {
-     result.innerHTML = "Scissors cuts Paper, You Lose!"
+     result.innerHTML = "Scissors cuts Paper, You Lose!"//displays a message detailing who won, how and updates the score based off that
      cpuwins++
      cpu_score.innerHTML = "Computer score: " + cpuwins
   } else if(cpuchoice == 4) {
@@ -79,14 +79,14 @@ function papercheck2(){
      player_score.innerHTML = "Player score: " + playerwins
   }
 }
-function pickrock() {
-   player.innerHTML = '<img src="assets/rock.png" alt="" class="display">'
+function pickrock() {// thins is the function for when the player selects paper
+   player.innerHTML = '<img src="assets/rock.png" alt="" class="display">'// changes the image on the player display
    cpuchoice = computerchoice()
     /*roberto is roberto*/
     result.innerHTML = "Computer's thinking...";
     /*roberto is roberto*/
-    computer.innerHTML = ""
-   setTimeout(rockcheck1, 1500)
+    computer.innerHTML = ""//resets the computer's display
+   setTimeout(rockcheck1, 1500)// makes rockcheck1 function run after 1.5sec
 }
 function rockcheck1(){
   setTimeout(rockcheck2, 2000)
@@ -128,13 +128,13 @@ function rockcheck2(){
      cpu_score.innerHTML = "Computer score: " + cpuwins
   }
 }
-function pickscissors() {
-    player.innerHTML = '<img src="assets/scissors.png" alt="" class="display">'
+function pickscissors() {// thins is the function for when the player selects paper
+    player.innerHTML = '<img src="assets/scissors.png" alt="" class="display">'// changes the image on the player display
     cpuchoice = computerchoice()
     /*roberto is roberto*/
     result.innerHTML = "Computer's thinking...";
     /*roberto is roberto*/
-    computer.innerHTML = ""
+    computer.innerHTML = ""//resets the computer's display
    setTimeout(scissorscheck1, 1500)
 }
 function scissorscheck1(){
@@ -177,13 +177,13 @@ function scissorscheck2(){
         player_score.innerHTML = "Player score: " + playerwins
      }
 }
-function pickmicrowave() {
-   player.innerHTML = '<img src="assets/microwave.png" alt="" class="display_micro">'
+function pickmicrowave() {// thins is the function for when the player selects paper
+   player.innerHTML = '<img src="assets/microwave.png" alt="" class="display_micro">'// changes the image on the player display
    cpuchoice = computerchoice()
    /*roberto is roberto*/
    result.innerHTML = "Computer's thinking...";
    /*roberto is roberto*/
-   computer.innerHTML = ""
+   computer.innerHTML = ""//resets the computer's display
   setTimeout(microwavecheck1, 1500)
   
    }
@@ -228,12 +228,12 @@ function microwavecheck2(){
      cpu_score.innerHTML = "Computer score: " + cpuwins
   }
 }
-function picktinfoil() {
-   player.innerHTML = '<img src="assets/tin_foil.png" alt="" class="display">'
+function picktinfoil() {// thins is the function for when the player selects paper
+   player.innerHTML = '<img src="assets/tin_foil.png" alt="" class="display">'// changes the image on the player display
    cpuchoice = computerchoice()
    result.innerHTML = "Computer's thinking...";
     /*roberto is roberto*/
-    computer.innerHTML = ""
+    computer.innerHTML = ""//resets the computer's display
    setTimeout(tinfoilcheck1, 1500)
    
 }
@@ -280,7 +280,7 @@ function tinfoilcheck2(){
 function Clear() {
     computer.innerHTML = ""
     player.innerHTML = ""
-    result.innerHTML = ""
+    result.innerHTML = ""//clears th score and display
     playerwins = 0
     cpuwins = 0
     player_score.innerHTML = "Player score: " + playerwins
@@ -288,7 +288,7 @@ function Clear() {
 }
 paper.addEventListener("click",pickpaper)
 rock.addEventListener("click",pickrock)
-scissors.addEventListener("click",pickscissors)
+scissors.addEventListener("click",pickscissors)// these listen for if you click the item
 microwave.addEventListener("click",pickmicrowave)
 tinfoil.addEventListener("click",picktinfoil)
 reset.addEventListener("click", Clear)
