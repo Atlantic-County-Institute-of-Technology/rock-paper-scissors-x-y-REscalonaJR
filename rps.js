@@ -232,7 +232,7 @@ function picktinfoil() {// thins is the function for when the player selects pap
    player.innerHTML = '<img src="assets/tin_foil.png" alt="" class="display">'// changes the image on the player display
    cpuchoice = computerchoice()
    result.innerHTML = "Computer's thinking...";
-    /*roberto is roberto*/
+
     computer.innerHTML = ""//resets the computer's display
    setTimeout(tinfoilcheck1, 1500)
    
