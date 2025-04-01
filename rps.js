@@ -31,7 +31,7 @@ function computerchoice() {
     was 1-5 tin foil but would almost never appear since you would need to get exactly 5.00*/
 }
 function pickpaper() {// thins is the function for when the player selects paper
-    playerpick = 1
+   playerpick = 1
    cpuchoice = computerchoice()
    result.innerHTML = "Computer's thinking...";
     /*roberto is roberto*/
@@ -138,7 +138,7 @@ function pickscissors() {// thins is the function for when the player selects pa
 }
 function scissorscheck1(){
    player.innerHTML = '<img src="assets/scissors.png" alt="" class="display">'// changes the image on the player display
-    setTimeout(scissorscheck2, 3000)
+    setTimeout(scissorscheck2, 2000)
      if (cpuchoice == 1 ) {
        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
        result.innerHTML = "Rock, Paper, Scissors, Shoot!"
