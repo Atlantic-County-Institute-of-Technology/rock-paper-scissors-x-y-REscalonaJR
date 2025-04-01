@@ -31,6 +31,7 @@ function computerchoice() {
     was 1-5 tin foil but would almost never appear since you would need to get exactly 5.00*/
 }
 function pickpaper() {// thins is the function for when the player selects paper
+  player.innerHTML = ""
    playerpick = 1
    cpuchoice = computerchoice()
    result.innerHTML = "Computer's thinking...";
@@ -81,6 +82,7 @@ function papercheck2(){
 }
 function pickrock() {// thins is the function for when the player selects paper
    cpuchoice = computerchoice()
+   player.innerHTML = ""
     /*roberto is roberto*/
     result.innerHTML = "Computer's thinking...";
     /*roberto is roberto*/
@@ -130,6 +132,7 @@ function rockcheck2(){
 }
 function pickscissors() {// thins is the function for when the player selects paper
     cpuchoice = computerchoice()
+    player.innerHTML = ""
     /*roberto is roberto*/
     result.innerHTML = "Computer's thinking...";
     /*roberto is roberto*/
@@ -179,6 +182,7 @@ function scissorscheck2(){
 }
 function pickmicrowave() {// thins is the function for when the player selects paper
    cpuchoice = computerchoice()
+   player.innerHTML = ""
    /*roberto is roberto*/
    result.innerHTML = "Computer's thinking...";
    /*roberto is roberto*/
@@ -229,10 +233,9 @@ function microwavecheck2(){
   }
 }
 function picktinfoil() {// thins is the function for when the player selects paper
-   player.innerHTML = '<img src="assets/tin_foil.png" alt="" class="display">'// changes the image on the player display
    cpuchoice = computerchoice()
    result.innerHTML = "Computer's thinking...";
-
+   player.innerHTML = ""
     computer.innerHTML = ""//resets the computer's display
    setTimeout(tinfoilcheck1, 1500)
    
