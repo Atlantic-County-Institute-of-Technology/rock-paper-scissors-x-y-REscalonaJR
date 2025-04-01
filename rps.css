@@ -122,7 +122,7 @@ body{
 }
 .display{
     height: 100px;
-    animation: bounce 2s 1.5s linear  1;/*sets the height and  of the image*/
+    animation: bounce 2s linear  1;/*sets the height and  of the image*/
     height: 140px;
 }
 @keyframes bounce {
@@ -153,7 +153,7 @@ body{
     position: absolute;
     height:120px ;
     top: 10px;
-    animation: bounce 2s 1.5s linear  1;
+    animation: bounce 2s linear  1;
 }
 .cpu_display{
     position: absolute;
