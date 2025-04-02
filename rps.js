@@ -31,8 +31,8 @@ function computerchoice() {
     was 1-5 tin foil but would almost never appear since you would need to get exactly 5.00*/
 }
 function pickpaper() {// thins is the function for when the player selects paper
-   player.innerHTML = '<img src="assets/paper.png" alt="" class="display">';// changes the image on the player display
-    playerpick = 1
+  player.innerHTML = ""
+   playerpick = 1
    cpuchoice = computerchoice()
    result.innerHTML = "Computer's thinking...";
     /*roberto is roberto*/
@@ -40,6 +40,7 @@ function pickpaper() {// thins is the function for when the player selects paper
    setTimeout(papercheck1, 1500)// makes papercheck1 function run after 1.5sec
 }
 function papercheck1(){
+   player.innerHTML = '<img src="assets/paper.png" alt="" class="display">';// changes the image on the player display
   setTimeout(papercheck2, 2000)// makes papercheck2 function run after 2sec
    if (cpuchoice == 1 ) {
        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
@@ -80,8 +81,8 @@ function papercheck2(){
   }
 }
 function pickrock() {// thins is the function for when the player selects paper
-   player.innerHTML = '<img src="assets/rock.png" alt="" class="display">'// changes the image on the player display
    cpuchoice = computerchoice()
+   player.innerHTML = ""
     /*roberto is roberto*/
     result.innerHTML = "Computer's thinking...";
     /*roberto is roberto*/
@@ -89,6 +90,7 @@ function pickrock() {// thins is the function for when the player selects paper
    setTimeout(rockcheck1, 1500)// makes rockcheck1 function run after 1.5sec
 }
 function rockcheck1(){
+   player.innerHTML = '<img src="assets/rock.png" alt="" class="display">'// changes the image on the player display
   setTimeout(rockcheck2, 2000)
    if (cpuchoice == 1 ) {
        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
@@ -129,8 +131,8 @@ function rockcheck2(){
   }
 }
 function pickscissors() {// thins is the function for when the player selects paper
-    player.innerHTML = '<img src="assets/scissors.png" alt="" class="display">'// changes the image on the player display
     cpuchoice = computerchoice()
+    player.innerHTML = ""
     /*roberto is roberto*/
     result.innerHTML = "Computer's thinking...";
     /*roberto is roberto*/
@@ -138,7 +140,8 @@ function pickscissors() {// thins is the function for when the player selects pa
    setTimeout(scissorscheck1, 1500)
 }
 function scissorscheck1(){
-    setTimeout(scissorscheck2, 3000)
+   player.innerHTML = '<img src="assets/scissors.png" alt="" class="display">'// changes the image on the player display
+    setTimeout(scissorscheck2, 2000)
      if (cpuchoice == 1 ) {
        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
        result.innerHTML = "Rock, Paper, Scissors, Shoot!"
@@ -178,8 +181,8 @@ function scissorscheck2(){
      }
 }
 function pickmicrowave() {// thins is the function for when the player selects paper
-   player.innerHTML = '<img src="assets/microwave.png" alt="" class="display_micro">'// changes the image on the player display
    cpuchoice = computerchoice()
+   player.innerHTML = ""
    /*roberto is roberto*/
    result.innerHTML = "Computer's thinking...";
    /*roberto is roberto*/
@@ -189,6 +192,7 @@ function pickmicrowave() {// thins is the function for when the player selects p
    }
 
 function microwavecheck1(){
+   player.innerHTML = '<img src="assets/microwave.png" alt="" class="display_micro">'// changes the image on the player display
   setTimeout(microwavecheck2, 2000)
     if (cpuchoice == 1 ) {
       computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
@@ -229,15 +233,15 @@ function microwavecheck2(){
   }
 }
 function picktinfoil() {// thins is the function for when the player selects paper
-   player.innerHTML = '<img src="assets/tin_foil.png" alt="" class="display">'// changes the image on the player display
    cpuchoice = computerchoice()
    result.innerHTML = "Computer's thinking...";
-
+   player.innerHTML = ""
     computer.innerHTML = ""//resets the computer's display
    setTimeout(tinfoilcheck1, 1500)
    
 }
 function tinfoilcheck1(){
+   player.innerHTML = '<img src="assets/tin_foil.png" alt="" class="display">'// changes the image on the player display
   setTimeout(tinfoilcheck2, 2000)
    if (cpuchoice == 1 ) {
        computer.innerHTML = '<img src="assets/paper.png" alt="" class="cpu_display">';
