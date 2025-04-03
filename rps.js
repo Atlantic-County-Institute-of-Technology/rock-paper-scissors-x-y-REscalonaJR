@@ -13,29 +13,37 @@ let result = document.getElementById("result")
 let cpu_score = document.getElementById("computer_score")
 let cpuwins = 0
 const reset = document.getElementById("reset")
-for (let index = 0; index < buttons.length; index++) {
-    buttons[index].addEventListener("click", () => {
-        buttons.forEach(Element => {
-            Element.style.display = "none"/*makes the buttons dissapear for 4.5seconds*/
-            setTimeout(displayagain, 4500)           
-        })
-    })
+choices.forEach(button => {
+   button.addEventListener('click', () => {
+       console.log("Choice button clicked.")
+       // choose the index of the target button id, then have the cpu choose a random value
+       check_winner((choices_list.indexOf(button.id)), cpu_choose_item());
+   })
+})
+
+// returns a random integer value from 1-3 (1 = rock, 2 = scissors, etc.)
+function cpu_choose_item() { 
+   return Math.floor(Math.random() * choices.length) + 1 
 }
+const choice_icons = ['assets/rock.png',
+                      'assets/paper.png',
+                      'assets/scissors.png',
+                      'assets/microwave.png',
+                      'assets/tin_foil.png']
 function displayagain(){
         buttons.forEach(Element => {/*makes the buttons appear again*/
             Element.style.display = "flex"
         })
 }
-function computerchoice() {
-    return Math.floor(Math.random() * (4.99)) + 1     /*makes it pick a number 1-5.99 because if it 
-    was 1-5 tin foil but would almost never appear since you would need to get exactly 5.00*/
+
+function checkwinner(){
+
 }
-function pickpaper() {// thins is the function for when the player selects paper
+/*function pickpaper() {// thins is the function for when the player selects paper
   player.innerHTML = ""
    playerpick = 1
    cpuchoice = computerchoice()
    result.innerHTML = "Computer's thinking...";
-    /*roberto is roberto*/
     computer.innerHTML = ""//resets the computer's display
    setTimeout(papercheck1, 1500)// makes papercheck1 function run after 1.5sec
 }
@@ -83,9 +91,7 @@ function papercheck2(){
 function pickrock() {// thins is the function for when the player selects paper
    cpuchoice = computerchoice()
    player.innerHTML = ""
-    /*roberto is roberto*/
     result.innerHTML = "Computer's thinking...";
-    /*roberto is roberto*/
     computer.innerHTML = ""//resets the computer's display
    setTimeout(rockcheck1, 1500)// makes rockcheck1 function run after 1.5sec
 }
@@ -133,9 +139,7 @@ function rockcheck2(){
 function pickscissors() {// thins is the function for when the player selects paper
     cpuchoice = computerchoice()
     player.innerHTML = ""
-    /*roberto is roberto*/
     result.innerHTML = "Computer's thinking...";
-    /*roberto is roberto*/
     computer.innerHTML = ""//resets the computer's display
    setTimeout(scissorscheck1, 1500)
 }
@@ -183,9 +187,7 @@ function scissorscheck2(){
 function pickmicrowave() {// thins is the function for when the player selects paper
    cpuchoice = computerchoice()
    player.innerHTML = ""
-   /*roberto is roberto*/
    result.innerHTML = "Computer's thinking...";
-   /*roberto is roberto*/
    computer.innerHTML = ""//resets the computer's display
   setTimeout(microwavecheck1, 1500)
   
@@ -280,7 +282,7 @@ function tinfoilcheck2(){
   } else if (cpuchoice == 5) {
      result.innerHTML = "It's a draw!"
   }
-}
+}*/
 function Clear() {
     computer.innerHTML = ""
     player.innerHTML = ""

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        
+        <div class="scoreboard">
+            <div class="score">
+                <p>You</p>
+                <p id="player-score">0</p>
+            </div>
+            <div class="score">
+                <p>Computer</p>
+                <p id="computer-score">0</p>
+            </div>
+        </div>
+        
+        <div class="choices">
+            <div class="choice" id="rock"><img src="assets\rock.png" alt="" class="choice_image"></div>
+            <div class="choice" id="paper"><img src="assets\paper.png" alt="" class="choice_image"></div>
+            <div class="choice" id="scissors"><img src="assets\scissors.png" alt="" class="choice_image"></div>
+            <div class="choice" id="stapler"><img src="assets\stapler.png" alt="" class="choice_image"></div>
+            <div class="choice" id="press"><img src="assets\press.png" alt="" class="choice_image"></div>
+        </div>
+        
+        <div class="battle-area">
+            <div class="player">
+                <div class="player-choice" id="player-choice"></div>
+                <p>Your Choice</p>
+            </div>
+            
+            <div class="vs">VS</div>
+            
+            <div class="computer">
+                <div class="computer-choice" id="computer-choice"></div>
+                <p>Computer's Choice</p>
+            </div>
+        </div>
+        
+        <div class="result" id="result">Choose your weapon!</div>
+        
+        <button class="reset-btn" id="reset-btn">Reset Game</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
