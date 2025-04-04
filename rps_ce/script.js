@@ -16,7 +16,7 @@ const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 const stapler = document.getElementById('stapler');
 const press = document.getElementById('press');
-const choices = document.querySelectorAll('.choice');
+const buttons = document.querySelectorAll('.choice');
 
 // scorekeeping values
 let player_score_val = 0;
@@ -39,7 +39,7 @@ reset_button.addEventListener('click', () => {
 
 
 // for each button, add the check_winner function
-choices.forEach(choice => {
+buttons.forEach(choice => {
     choice.addEventListener('click', () => {
         console.log("Choice button clicked.")
         // choose the index of the target button id, then have the cpu choose a random value
@@ -49,7 +49,7 @@ choices.forEach(choice => {
 
 // returns a random integer value from 1-3 (1 = rock, 2 = scissors, etc.)
 function cpu_choose_item() { 
-    return Math.floor(Math.random() * choices.length) + 1 
+    return Math.floor(Math.random() * buttons.length) + 1 
 }
 
 // compare the player's selected item to the CPU's

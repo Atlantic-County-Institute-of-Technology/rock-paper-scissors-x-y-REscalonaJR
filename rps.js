@@ -4,40 +4,74 @@ const scissors = document.getElementById("scissors")
 const microwave = document.getElementById("microwave")
 const tinfoil = document.getElementById("tinfoil")
 const buttons = document.querySelectorAll("button")
-let player = document.getElementById("player")
+let player_choice = document.getElementById("player")
 let playerpick = 0
 let player_score = document.getElementById("player_score")/*this is where it gets all the stuff from the html*/
 let playerwins = 0
-let computer = document.getElementById("computer")
+let computer_choice = document.getElementById("computer")
 let result = document.getElementById("result")
 let cpu_score = document.getElementById("computer_score")
 let cpuwins = 0
 const reset = document.getElementById("reset")
-choices.forEach(button => {
+buttons.forEach(button => {
    button.addEventListener('click', () => {
        console.log("Choice button clicked.")
        // choose the index of the target button id, then have the cpu choose a random value
-       check_winner((choices_list.indexOf(button.id)), cpu_choose_item());
+       checkwinner((choices_list.indexOf(button.id)), cpu_choose_item());
    })
 })
-
-// returns a random integer value from 1-3 (1 = rock, 2 = scissors, etc.)
-function cpu_choose_item() { 
-   return Math.floor(Math.random() * choices.length) + 1 
-}
+const choices_list = ['rock', 'paper','scissors', 'microwave','tin_foil'];
 const choice_icons = ['assets/rock.png',
                       'assets/paper.png',
                       'assets/scissors.png',
                       'assets/microwave.png',
                       'assets/tin_foil.png']
+// returns a random integer value from 1-3 (1 = rock, 2 = scissors, etc.)
+function cpu_choose_item() { 
+   return Math.floor(Math.random() * buttons.length) + 1 
+}
+
 function displayagain(){
         buttons.forEach(Element => {/*makes the buttons appear again*/
             Element.style.display = "flex"
         })
 }
 
-function checkwinner(){
+function checkwinner(player, cpu){
+   console.log(`Player: ${player} | Computer: ${cpu}`);
+   let winner;
+   // if the values are equal, tie
+   if(player == cpu){
 
+   }
+   
+}
+function updateUI(player, cpu) {
+   result.innerHTML = "computer's thinking"
+   // empty out any images stored previously
+   player_choice.innerHTML = '';
+   computer_choice.innerHTML = '';
+   setTimeout(update2(player, cpu), 1000)
+   }
+
+   function update2(player, cpu){
+      result.innerHTML = "Rock, Paper, Sciccors, Shoot!"
+   // create a new image, set the source to the player's
+   // choice, format the size, then append to player_choice
+   let p_img = new Image();
+   p_img.src = choice_icons[player-1];
+   p_img.classList.add('display'); 
+   player_choice.appendChild(p_img); 
+
+   // create a new image, set the source to the cpu's
+   // choice, format the size, then append to computer_choice
+   let c_img = new Image();
+   c_img.src = choice_icons[cpu-1];
+   c_img.classList.add('cpu_display');
+   computer_choice.appendChild(c_img);
+setTimeout(update3(player,cpu), 2000)
+   player_score.innerText = player_score_val;
+   computer_score.innerText = computer_score_val;
 }
 /*function pickpaper() {// thins is the function for when the player selects paper
   player.innerHTML = ""
@@ -283,7 +317,7 @@ function tinfoilcheck2(){
      result.innerHTML = "It's a draw!"
   }
 }*/
-function Clear() {
+/*function Clear() {
     computer.innerHTML = ""
     player.innerHTML = ""
     result.innerHTML = ""//clears th score and display
@@ -297,4 +331,4 @@ rock.addEventListener("click",pickrock)
 scissors.addEventListener("click",pickscissors)// these listen for if you click the item
 microwave.addEventListener("click",pickmicrowave)
 tinfoil.addEventListener("click",picktinfoil)
-reset.addEventListener("click", Clear)
+reset.addEventListener("click", Clear)*/
