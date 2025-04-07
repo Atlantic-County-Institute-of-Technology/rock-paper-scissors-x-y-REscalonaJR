@@ -121,7 +121,7 @@ body{
     height: 100px;/*sets the height of the image*/
 }
 .display{
-    height: 100px;
+    height: 150px;
     animation: bounce 2s linear  1;/*sets the height and  of the image*/
     
 }
@@ -157,7 +157,7 @@ body{
 }
 .cpu_display{
     position: absolute;
-    height: 100px;
+    height: 150px;
     left: 30px;
     animation: bounce 2s  linear  1;
 }

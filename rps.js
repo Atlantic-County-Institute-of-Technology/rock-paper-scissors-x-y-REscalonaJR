@@ -134,14 +134,22 @@ function updateUI(player, cpu, winner) {
    // choice, format the size, then append to player_choice
    let p_img = new Image();
    p_img.src = choice_icons[player];
-   p_img.classList.add('display'); 
+   if (player==4) {
+      p_img.classList.add('display_micro'); 
+   } else {
+      p_img.classList.add('display'); 
+   }
    player_choice.appendChild(p_img); 
 
    // create a new image, set the source to the cpu's
    // choice, format the size, then append to computer_choice
    let c_img = new Image();
    c_img.src = choice_icons[cpu];
-   c_img.classList.add('cpu_display');
+   if (cpu==4){
+      c_img.classList.add("cpu_display_micro")
+   } else {
+      c_img.classList.add('cpu_display');
+   }
    computer_choice.appendChild(c_img);
 setTimeout(() => {update3(player,cpu,winner)}, 2000)
 }
