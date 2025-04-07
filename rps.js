@@ -91,7 +91,7 @@ function checkwinner(player, cpu){
       }
    }else if(player == 3){
       if (cpu==0) {
-         winner=="Paper Is more Durable than tin foil, You lose!"
+         winner="Paper Is more Durable than tin foil, You lose!"
          cpuwins++
       } else if(cpu==1){
          winner="Tin Foil covers Rock, You Win!"
