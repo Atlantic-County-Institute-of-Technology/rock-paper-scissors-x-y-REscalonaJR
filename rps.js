@@ -18,7 +18,6 @@ buttons.forEach(button => {
        console.log("Choice button clicked.")
        // choose the index of the target button id, then have the cpu choose a random value
        checkwinner((choices_list.indexOf(button.id)), cpu_choose_item());
-       button.style.display = "none"
    })
 })
 const choices_list = ['paper', 'rock', 'scissors', 'tinfoil','microwave'];
@@ -126,6 +125,9 @@ function updateUI(player, cpu, winner) {
    // empty out any images stored previously
    player_choice.innerHTML = '';
    computer_choice.innerHTML = '';
+   buttons.forEach(Element => {/*makes the buttons disappear */
+      Element.style.display = "none"
+  });
    setTimeout(() => {update2(player, cpu, winner)}, 1000)
    }
 
