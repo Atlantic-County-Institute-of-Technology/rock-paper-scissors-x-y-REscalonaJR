@@ -139,6 +139,7 @@ function updateUI(player, cpu, winner) {
       Element.style.display = "none"
       setTimeout(()=>{buttons.forEach(Element => {/*makes the buttons appear again*/
          Element.style.display = "flex"
+         reset.style.display = "flex"
      })},3000)
   });
    setTimeout(() => {update2(player, cpu, winner)}, 1000)
@@ -173,7 +174,7 @@ function update3(player,cpu,winner){
 result.innerHTML = winner
 player_score.innerHTML = "Player score: " + playerwins
 cpu_score.innerHTML = "Computer score: " + cpuwins
-reset.style.display = "flex"
+
 }
 reset.addEventListener("click", Clear)
 /*function pickpaper() {// thins is the function for when the player selects paper
