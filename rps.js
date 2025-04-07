@@ -139,7 +139,6 @@ function updateUI(player, cpu, winner) {
       Element.style.display = "none"
       setTimeout(()=>{buttons.forEach(Element => {/*makes the buttons appear again*/
          Element.style.display = "flex"
-         reset.style.display = "flex"
      })},3000)
   });
    setTimeout(() => {update2(player, cpu, winner)}, 1000)
