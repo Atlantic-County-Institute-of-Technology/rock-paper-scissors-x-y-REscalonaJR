@@ -100,16 +100,16 @@ function checkwinner(player, cpu){
    }
    updateUI(player, cpu, winner);
 }
-function updateUI(player, cpu) {
+function updateUI(player, cpu, winner) {
    result.innerHTML = "computer's thinking"
    // empty out any images stored previously
    player_choice.innerHTML = '';
    computer_choice.innerHTML = '';
-   setTimeout(update2(player, cpu), 1000)
+   setTimeout(() => {update2(player, cpu, winner)}, 1000)
    }
 
    function update2(player, cpu, winner){
-      result.innerHTML = "Rock, Paper, Sciccors, Shoot!"       
+      result.innerHTML = "Rock, Paper, Scissors, Shoot!"       
    // create a new image, set the source to the player's
    // choice, format the size, then append to player_choice
    let p_img = new Image();
@@ -123,7 +123,7 @@ function updateUI(player, cpu) {
    c_img.src = choice_icons[cpu];
    c_img.classList.add('cpu_display');
    computer_choice.appendChild(c_img);
-setTimeout(update3(player,cpu,winner), 2000)
+setTimeout(() => {update3(player,cpu,winner)}, 2000)
 }
 function update3(player,cpu,winner){
 
