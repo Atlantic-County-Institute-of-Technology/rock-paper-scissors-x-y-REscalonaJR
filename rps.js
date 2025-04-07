@@ -20,15 +20,15 @@ buttons.forEach(button => {
        checkwinner((choices_list.indexOf(button.id)), cpu_choose_item());
    })
 })
-const choices_list = ['rock', 'paper','scissors', 'microwave','tin_foil'];
-const choice_icons = ['assets/rock.png',
-                      'assets/paper.png',
+const choices_list = ['paper', 'rock', 'scissors', 'tinfoil','microwave'];
+const choice_icons = ['assets/paper.png',
+                      'assets/rock.png',
                       'assets/scissors.png',
-                      'assets/microwave.png',
-                      'assets/tin_foil.png']
+                      'assets/tin_foil.png',
+                      'assets/microwave.png']
 // returns a random integer value from 1-3 (1 = rock, 2 = scissors, etc.)
 function cpu_choose_item() { 
-   return Math.floor(Math.random() * buttons.length) + 1 
+   return Math.floor((Math.random() * 4.99))
 }
 
 function displayagain(){
@@ -42,9 +42,63 @@ function checkwinner(player, cpu){
    let winner;
    // if the values are equal, tie
    if(player == cpu){
-
+      winner ="tie"
    }
-   
+   else if(player==0){
+      if(cpu == 1){
+         winner = "Paper covers Rock, You Win!"
+      }
+      else if(cpu==2){
+      winner="Scissors cuts Paper, You Lose!"
+   } else if (cpu==3) {
+      winner="Paper Is more Durable than tin foil, You Win!"
+   } else {
+      winner="Microwave Burns Paper, You Lose!"
+   }
+   }
+   else if (player == 1) {
+      if (cpu == 0) {
+         winner = "Paper Covers Rock, You Lose!"
+      } else if(cpu==2){
+         winner="Rock Crushes Scissors, You win!"
+      } else if (cpu==3) {
+         winner="Tin Foil covers Rock, You Lose!"
+      } else{
+         winner="Rock Crushes Microwave, You win!"
+      }
+      
+   } else if(player == 2) {
+      if (cpu==0) {
+         winner="Rock Crushes Microwave, You win!"
+      } else if(cpu==1) {
+         winner="Rock Crushes Scissors, You Lose!"
+      }else if (cpu==3) {
+         winner="Scissors cuts Tin Foil, You win!"
+      } else{
+         winner="Microwave melts scissors, You Win!"
+      }
+   }else if(player == 3){
+      if (cpu==0) {
+         winner=="Paper Is more Durable than tin foil, You lose!"
+      } else if(cpu==1){
+         winner="Tin Foil covers Rock, You Win!"
+      } else if(cpu==2){
+         winner="Scissors cuts Tin Foil, You Lose!"
+      }else{
+         winner="Tin Foil explodes Microwave, You Lose!"
+      }
+   } else {
+      if (cpu==0) {
+         winner="Microwave Burns Paper, You Win!"
+      } else if(cpu==1){
+         winner="Rock Crushes Microwave, You Lose!"
+      } else if(cpu==2){
+         winner="Microwave melts scissors, You Lose!"
+      } else{
+         winner="Tin Foil explodes Microwave, You Lose!"
+      }
+   }
+   updateUI(player, cpu, winner);
 }
 function updateUI(player, cpu) {
    result.innerHTML = "computer's thinking"
@@ -54,24 +108,25 @@ function updateUI(player, cpu) {
    setTimeout(update2(player, cpu), 1000)
    }
 
-   function update2(player, cpu){
-      result.innerHTML = "Rock, Paper, Sciccors, Shoot!"
+   function update2(player, cpu, winner){
+      result.innerHTML = "Rock, Paper, Sciccors, Shoot!"       
    // create a new image, set the source to the player's
    // choice, format the size, then append to player_choice
    let p_img = new Image();
-   p_img.src = choice_icons[player-1];
+   p_img.src = choice_icons[player];
    p_img.classList.add('display'); 
    player_choice.appendChild(p_img); 
 
    // create a new image, set the source to the cpu's
    // choice, format the size, then append to computer_choice
    let c_img = new Image();
-   c_img.src = choice_icons[cpu-1];
+   c_img.src = choice_icons[cpu];
    c_img.classList.add('cpu_display');
    computer_choice.appendChild(c_img);
-setTimeout(update3(player,cpu), 2000)
-   player_score.innerText = player_score_val;
-   computer_score.innerText = computer_score_val;
+setTimeout(update3(player,cpu,winner), 2000)
+}
+function update3(player,cpu,winner){
+
 }
 /*function pickpaper() {// thins is the function for when the player selects paper
   player.innerHTML = ""
