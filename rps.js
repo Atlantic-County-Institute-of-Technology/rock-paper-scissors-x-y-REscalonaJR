@@ -160,6 +160,9 @@ function update3(player,cpu,winner){
 result.innerHTML = winner
 player_score.innerHTML = "Player score: " + playerwins
 cpu_score.innerHTML = "Computer score: " + cpuwins
+buttons.forEach(Element => {/*makes the buttons appear again*/
+   Element.style.display = "flex"
+})
 }
 /*function pickpaper() {// thins is the function for when the player selects paper
   player.innerHTML = ""
