@@ -47,55 +47,75 @@ function checkwinner(player, cpu){
    else if(player==0){
       if(cpu == 1){
          winner = "Paper covers Rock, You Win!"
+         playerwins++
       }
       else if(cpu==2){
       winner="Scissors cuts Paper, You Lose!"
+      cpuwins++
    } else if (cpu==3) {
       winner="Paper Is more Durable than tin foil, You Win!"
+      playerwins++
    } else {
       winner="Microwave Burns Paper, You Lose!"
+      cpuwins++
    }
    }
    else if (player == 1) {
       if (cpu == 0) {
          winner = "Paper Covers Rock, You Lose!"
+         cpuwins++
       } else if(cpu==2){
          winner="Rock Crushes Scissors, You win!"
+         playerwins++
       } else if (cpu==3) {
          winner="Tin Foil covers Rock, You Lose!"
+         cpuwins++
       } else{
          winner="Rock Crushes Microwave, You win!"
+         playerwins++
       }
       
    } else if(player == 2) {
       if (cpu==0) {
          winner="Rock Crushes Microwave, You win!"
+         playerwins++
       } else if(cpu==1) {
          winner="Rock Crushes Scissors, You Lose!"
+         cpuwins++
       }else if (cpu==3) {
          winner="Scissors cuts Tin Foil, You win!"
+         playerwins++
       } else{
-         winner="Microwave melts scissors, You Win!"
+         winner="Microwave melts scissors, You Lose!"
+         cpuwins++
       }
    }else if(player == 3){
       if (cpu==0) {
          winner=="Paper Is more Durable than tin foil, You lose!"
+         cpuwins++
       } else if(cpu==1){
          winner="Tin Foil covers Rock, You Win!"
+         playerwins++
       } else if(cpu==2){
          winner="Scissors cuts Tin Foil, You Lose!"
+         cpuwins++
       }else{
-         winner="Tin Foil explodes Microwave, You Lose!"
+         winner="Tin Foil explodes Microwave, You Win!"
+         playerwins++
       }
    } else {
       if (cpu==0) {
          winner="Microwave Burns Paper, You Win!"
+         playerwins++
       } else if(cpu==1){
          winner="Rock Crushes Microwave, You Lose!"
+         cpuwins++
       } else if(cpu==2){
-         winner="Microwave melts scissors, You Lose!"
+         winner="Microwave melts scissors, You Win!"
+         playerwins++
       } else{
          winner="Tin Foil explodes Microwave, You Lose!"
+         cpuwins++
       }
    }
    updateUI(player, cpu, winner);
@@ -126,7 +146,9 @@ function updateUI(player, cpu, winner) {
 setTimeout(() => {update3(player,cpu,winner)}, 2000)
 }
 function update3(player,cpu,winner){
-
+result.innerHTML = winner
+player_score.innerHTML = "Player score: " + playerwins
+cpu_score.innerHTML = "Computer score: " + cpuwins
 }
 /*function pickpaper() {// thins is the function for when the player selects paper
   player.innerHTML = ""
