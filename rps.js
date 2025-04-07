@@ -134,10 +134,12 @@ function updateUI(player, cpu, winner) {
    // empty out any images stored previously
    player_choice.innerHTML = '';
    computer_choice.innerHTML = '';
+   reset.style.display = "none"
    buttons.forEach(Element => {/*makes the buttons disappear */
       Element.style.display = "none"
       setTimeout(()=>{buttons.forEach(Element => {/*makes the buttons appear again*/
          Element.style.display = "flex"
+         reset.style.display = "flex"
      })},3000)
   });
    setTimeout(() => {update2(player, cpu, winner)}, 1000)
