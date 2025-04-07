@@ -120,6 +120,15 @@ function checkwinner(player, cpu){
    }
    updateUI(player, cpu, winner);
 }
+function Clear() {
+   computer.innerHTML = ""
+   player.innerHTML = ""
+   result.innerHTML = ""//clears th score and display
+   playerwins = 0
+   cpuwins = 0
+   player_score.innerHTML = "Player score: " + playerwins
+   cpu_score.innerHTML = "Computer score: " + cpuwins
+}
 function updateUI(player, cpu, winner) {
    result.innerHTML = "computer's thinking"
    // empty out any images stored previously
@@ -163,8 +172,8 @@ function update3(player,cpu,winner){
 result.innerHTML = winner
 player_score.innerHTML = "Player score: " + playerwins
 cpu_score.innerHTML = "Computer score: " + cpuwins
-
 }
+reset.addEventListener("click", Clear)
 /*function pickpaper() {// thins is the function for when the player selects paper
   player.innerHTML = ""
    playerpick = 1
@@ -423,4 +432,4 @@ rock.addEventListener("click",pickrock)
 scissors.addEventListener("click",pickscissors)// these listen for if you click the item
 microwave.addEventListener("click",pickmicrowave)
 tinfoil.addEventListener("click",picktinfoil)
-reset.addEventListener("click", Clear)*/
+*/
